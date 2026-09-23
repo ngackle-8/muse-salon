@@ -641,6 +641,51 @@ nav {
     color: var(--sage);
 }
 
+
+.book-policies {
+    margin-top: 100px;
+    padding-top: 40px;
+    max-width: 650px;
+}
+
+.book-policies-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    margin-bottom: 24px;
+}
+
+.book-policies-text {
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 28px;
+}
+
+.book-policies-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    color: inherit;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+}
+
+.book-policies-link span {
+    transition: transform 0.3s ease;
+}
+
+.book-policies-link:hover span {
+    transform: translateX(6px);
+}
+
+
+
 .book-heading {
     margin-bottom: 100px;
 }
@@ -713,15 +758,20 @@ nav {
 }
 
 
+/* FOOTER */
+
 .footer {
-    padding: 
-    50px 
-    8vw 
-    calc(30px + env(safe-area-inset-bottom));
+    padding:
+        50px
+        8vw
+        calc(30px + env(safe-area-inset-bottom));
 
     background: var(--black);
     color: var(--cream);
 }
+
+
+/* TOP */
 
 .footer-top {
     display: flex;
@@ -749,10 +799,12 @@ nav {
     color: var(--sage);
 }
 
+
+/* MAIN */
+
 .footer-main {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-
     gap: 80px;
 
     padding: 70px 0;
@@ -766,47 +818,109 @@ nav {
     letter-spacing: -0.06em;
 }
 
+
+/* LINK GRID */
+
 .footer-links {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
 
-    gap: 60px;
-
-    align-self: end;
+    column-gap: 70px;
+    row-gap: 65px;
 }
 
 .footer-nav,
-.footer-social {
+.footer-visit,
+.footer-connect,
+.footer-join {
     display: flex;
     flex-direction: column;
-
-    gap: 14px;
+    align-items: flex-start;
 }
 
-.footer-links p {
-    margin-bottom: 15px;
+
+/* COLUMN LABELS */
+
+.footer-nav > p,
+.footer-visit > p:first-child,
+.footer-connect > p,
+.footer-join > p {
+    margin-bottom: 28px;
 
     font-size: 9px;
+    font-weight: 400;
     letter-spacing: 3px;
 
     color: var(--sage);
 }
 
-.footer-links a {
+
+/* LINKS */
+
+.footer-nav a,
+.footer-connect a,
+.footer-join a {
     width: fit-content;
+
+    margin-bottom: 10px;
 
     color: var(--cream);
     text-decoration: none;
 
     font-size: 14px;
     font-weight: 300;
+    line-height: 1.35;
 
     transition: opacity 0.3s ease;
 }
 
-.footer-links a:hover {
+.footer-nav a:hover,
+.footer-connect a:hover,
+.footer-join a:hover,
+.footer-address:hover {
     opacity: 0.5;
 }
+
+
+/* VISIT */
+
+.footer-address {
+    color: var(--cream);
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+
+    transition: opacity 0.3s ease;
+}
+
+.footer-hours {
+    margin-top: 24px;
+
+    color: var(--sage);
+
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: 0.18em;
+}
+
+.footer-note {
+    display: block;
+
+    margin-top: 18px;
+
+    font-size: 13px;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: 0;
+
+    opacity: 0.7;
+}
+
+
+/* BOTTOM */
 
 .footer-bottom {
     display: flex;
@@ -849,6 +963,195 @@ nav {
     transform: translateY(0);
 }
 
+
+
+
+/* POLICIES PAGE */
+
+.policies-page {
+    background: var(--cream);
+    color: var(--black);
+}
+
+.policies-hero {
+    padding: 0 8vw 120px;
+}
+
+.policies-nav {
+    margin-left: -8vw;
+    margin-right: -8vw;
+
+    padding: 30px 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.policies-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    color: inherit;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+}
+
+.policies-back span {
+    transition: transform 0.3s ease;
+}
+
+.policies-back:hover span {
+    transform: translateX(6px);
+}
+
+.policies-hero-content {
+    padding-top: clamp(100px, 10vw, 180px);
+}
+
+.policies-hero h1 {
+    margin-top: 30px;
+
+    font-size: clamp(70px, 10vw, 150px);
+    font-weight: 200;
+    line-height: 0.85;
+    letter-spacing: -0.065em;
+}
+
+.policies-intro {
+    max-width: 540px;
+
+    margin-top: 60px;
+    margin-left: auto;
+
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.6;
+}
+
+.policies-nav .logo {
+    color: var(--black);
+}
+
+.policies-back {
+    color: var(--black);
+}
+
+/* POLICY LIST */
+
+.policies-list {
+    padding: 40px 8vw 160px;
+    background: var(--cream);
+}
+
+.policy-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+
+    padding: 65px 0;
+
+    border-top: 1px solid rgba(16, 17, 15, 0.2);
+}
+
+.policy-item:last-child {
+    border-bottom: 1px solid rgba(16, 17, 15, 0.2);
+}
+
+.policy-number {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+.policy-content {
+    max-width: 850px;
+    margin-left: auto;
+    width: 100%;
+}
+
+.policy-content h2 {
+    margin-bottom: 35px;
+
+    font-size: clamp(36px, 4vw, 64px);
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.policy-content p {
+    max-width: 620px;
+
+    font-size: 17px;
+    font-weight: 200;
+    line-height: 1.7;
+}
+
+.policy-content p + p {
+    margin-top: 20px;
+}
+
+.policies-contact {
+    padding: 120px 8vw 140px;
+
+    background: var(--forest);
+    color: var(--cream);
+}
+
+.policies-contact-content {
+    margin-top: 70px;
+}
+
+.policies-contact-content h2 {
+    font-size: clamp(60px, 8vw, 120px);
+    font-weight: 200;
+    line-height: 1;
+    letter-spacing: -0.06em;
+}
+
+.policies-contact-content p {
+    max-width: 500px;
+
+    margin-top: 60px;
+    margin-left: auto;
+
+    font-size: 17px;
+    font-weight: 200;
+    line-height: 1.7;
+}
+
+.policies-contact-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 500px;
+
+    margin-top: 35px;
+    margin-left: auto;
+    padding: 20px 0;
+
+    border-top: 1px solid rgba(241, 239, 233, 0.3);
+    border-bottom: 1px solid rgba(241, 239, 233, 0.3);
+
+    color: inherit;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+}
+
+.policies-contact-link span {
+    transition: transform 0.3s ease;
+}
+
+.policies-contact-link:hover span {
+    transform: translateX(6px);
+}
 
 
 
@@ -1074,6 +1377,15 @@ nav {
         padding: 100px 24px;
     }
     
+    .book-policies {
+        margin-top: 70px;
+        padding-top: 30px;
+    }
+
+    .book-policies-text {
+        font-size: 16px;
+    }
+
     .book-heading {
         margin-bottom: 70px;
     }
@@ -1141,6 +1453,9 @@ nav {
     
     .footer-bottom {
         align-items: flex-end;
+
+        white-space: nowrap;
+        font-size: 7px;
     
         gap: 30px;
     }
@@ -1159,6 +1474,87 @@ nav {
     .services-heading,
     .book-heading {
         transform: translateY(30px);
+    }
+
+
+
+/*Policy Page*/
+
+    .policies-hero {
+    padding:
+        0 24px 70px;
+    }
+
+    .policies-nav {
+    margin-left: -24px;
+    margin-right: -24px;
+
+    padding:
+        calc(20px + env(safe-area-inset-top))
+        24px
+        20px;
+    }
+
+    .policies-hero-content {
+        padding-top: 110px;
+    }
+
+    .policies-hero h1 {
+        font-size: clamp(58px, 18vw, 90px);
+    }
+
+    .policies-intro {
+        margin-top: 45px;
+        margin-left: 0;
+
+        font-size: 16px;
+    }
+
+    .policies-list {
+    padding: 20px 24px 100px;
+    }
+
+    .policy-item {
+        grid-template-columns: 45px 1fr;
+        padding: 45px 0;
+    }
+
+    .policy-content {
+        margin-left: 0;
+    }
+
+    .policy-content h2 {
+        margin-bottom: 24px;
+
+        font-size: clamp(32px, 10vw, 46px);
+    }
+
+    .policy-content p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .policies-contact {
+    padding: 80px 24px 90px;
+    }
+
+    .policies-contact-content {
+        margin-top: 50px;
+    }
+
+    .policies-contact-content h2 {
+        font-size: clamp(52px, 16vw, 76px);
+    }
+
+    .policies-contact-content p {
+        margin-top: 45px;
+        margin-left: 0;
+
+        font-size: 15px;
+    }
+
+    .policies-contact-link {
+        margin-left: 0;
     }
 }
 
