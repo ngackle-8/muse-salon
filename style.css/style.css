@@ -62,14 +62,15 @@ nav {
 }
 
 .logo {
-    color: var(--cream);
+    display: flex;
+    align-items: center;
     text-decoration: none;
+}
 
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 5px;
-
-    cursor: pointer;
+.logo img {
+    display: block;
+    width: 120px;
+    height: auto;
 }
 
 .nav-links {
@@ -112,6 +113,15 @@ nav {
 .nav-links a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+.hero-logo {
+    width: min(620px, 78vw);
+    height: auto;
+    display: block;
+    padding-top: 5px;
+
+    opacity: 95%;
 }
 
 
@@ -1033,10 +1043,6 @@ nav {
     line-height: 1.6;
 }
 
-.policies-nav .logo {
-    color: var(--black);
-}
-
 .policies-back {
     color: var(--black);
 }
@@ -1178,9 +1184,8 @@ nav {
         20px;
     }
 
-    .logo {
-        font-size: 16px;
-        letter-spacing: 4px;
+    .logo img {
+        width: 90px;
     }
 
     .nav-links {
