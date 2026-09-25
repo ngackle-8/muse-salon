@@ -113,3 +113,68 @@ const headingObserver = new IntersectionObserver((entries) => {
 sectionHeadings.forEach((heading) => {
     headingObserver.observe(heading);
 });
+
+
+
+/* SERVICE ACCORDION */
+
+const serviceGroups = document.querySelectorAll(".service-group");
+
+serviceGroups.forEach((group) => {
+
+    const button = group.querySelector(".service-item");
+
+    button.addEventListener("click", () => {
+
+        const isOpen = group.classList.contains("open");
+
+        serviceGroups.forEach((otherGroup) => {
+            otherGroup.classList.remove("open");
+        });
+
+        if (!isOpen) {
+            group.classList.add("open");
+        }
+
+    });
+
+});
+
+
+const serviceStylistLinks = document.querySelectorAll(".service-stylists a");
+
+serviceStylistLinks.forEach((link) => {
+
+    link.addEventListener("click", (event) => {
+
+        event.preventDefault();
+
+        const targetId = link.getAttribute("href");
+        const target = document.querySelector(targetId);
+
+        if (!target) return;
+
+
+        serviceGroups.forEach((group) => {
+            group.classList.remove("open");
+        });
+
+
+        target.classList.add("service-target");
+        target.classList.add("visible");
+
+
+        requestAnimationFrame(() => {
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+            target.classList.remove("service-target");
+
+        });
+
+    });
+
+});
